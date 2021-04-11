@@ -1,0 +1,104 @@
+/*Se borran margenes predeterminados del navegador*/
+* {
+  margin:0;
+  padding:0;
+}
+
+/*Estilo del "body" */
+body {
+  background: #FFFFFA;
+}
+
+/*Estilo del encabezado para abarcar el 100%*/
+header {
+  width: 100%;
+}
+/* Aquí empieza el estilo del menu responsive de la página */
+/* Color del menú y alineación al centro*/
+header nav {
+  width:90%;
+  max-width:1000px;
+  margin:20px auto;
+  background: #7f4897;
+}
+
+/* Se elimina el icono de "Menú" */
+.menu_bar {
+  display:none;
+}
+
+header nav ul {
+  overflow: hidden;
+  list-style: none;
+}
+
+
+/* Estilo a los elementos "li" */
+header nav ul li {
+  float: left;
+}
+
+/* Estilos a todos los elementos "a" */
+header nav ul li a {
+  color:#fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Estilos para todos los elementos "span" o estilo para los iconos del menú */
+header nav ul li span {
+  margin-right: 10px;
+}
+
+/* AL momento de pasar el mouse por encima del menú, se ilumina la opción por la que pasa el mouse */
+header nav ul li a:hover {
+  background: #8f5ba1;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Cuando el menú llegue a 1092px, aparecerá el menú responsive */
+@media screen and (max-width:1092px) {
+  header nav {
+    width: 80%;
+    height: 100%;
+    left: -100%;
+    margin:0;
+    position: fixed;
+  }
+
+/* Lineas entre las opciones del menú */
+  header nav ul li {
+    display: block;
+    float: none;
+    border-bottom:1px solid rgba(255, 2525, 255, 0.3);
+  }
+
+/* Icono de Menú */
+  .menu_bar {
+    display: block;
+    width: 100%;
+    background: #ccc;
+  }
+
+  .menu_bar .boton-menu {
+    display: block;
+    padding: 20px;
+    background: #8f5ba1;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+  }
+
+  .menu_bar span {
+    float: right;
+    font-size: 40px;
+  }
+}
